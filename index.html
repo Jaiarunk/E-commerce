@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arja Ecommerce - Shop</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d0d0d;
+      color: #f2f2f2;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+    }
+
+    /* Changed header h2 color to light grey */
+    header h2 {
+      color: #ccc;
+      font-size: 24px;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff9800;
+    }
+
+    .section {
+      padding: 60px 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section h2 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #ff9800;
+      border-bottom: 2px solid #333;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      width: 230px;
+      box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(255,255,255,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card-content h3 {
+      font-size: 18px;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      color: #ff3d00;
+      font-weight: bold;
+    }
+
+    /* New promotional block styling */
+    .promo-block {
+      background: linear-gradient(135deg, #ff6a00, #ee0979);
+      padding: 50px 30px;
+      text-align: center;
+      color: white;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      box-shadow: 0 8px 20px rgba(238, 9, 121, 0.6);
+      border-radius: 12px;
+      margin: 40px auto;
+      max-width: 1000px;
+      transition: transform 0.3s ease;
+    }
+    .promo-block:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(238, 9, 121, 0.9);
+    }
+
+    footer {
+      background-color: #111;
+      padding: 30px 20px;
+      text-align: center;
+      color: #aaa;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .products {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-end;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Arja Ecommerce</h2>
+    <nav>
+      <nav>
+  <a href="index.html">Home</a>
+  <a href="explore.html">Explore More</a>
+  <a href="About.html">About</a>
+  <a href="#">Contact</a>
+</nav>
+
+    </nav>
+  </header>
+
+  <!-- Existing sections -->
+  <div class="section">
+    <h2>Dresses</h2>
+    <div class="products">
+      <div class="card"><a href="#"><img src="https://plus.unsplash.com/premium_photo-1668443422929-dee6c96af891?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZmxvcmFsJTIwZHJlc3N8ZW58MHx8MHx8fDA%3D" /></a><div class="card-content"><h3>Floral Dress</h3><p class="price">₹3,279</p></div></div>
+      <div class="card"><a href="#"><img src="https://media.istockphoto.com/id/659270754/photo/beautiful-woman-in-a-ball-gown.webp?a=1&b=1&s=612x612&w=0&k=20&c=aqSpnPfPOHmvRHOudiswQOt1bM5Y5qnu1_niKy4cUJQ=" /></a><div class="card-content"><h3>Evening Gown</h3><p class="price">₹5,679</p></div></div>
+      <div class="card"><a href="#"><img src="data:image/jpeg;base64,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" /></a><div class="card-content"><h3>Summer Frock</h3><p class="price">₹2,459</p></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Watches</h2>
+    <div class="products">
+      <div class="card"><a href="#"><img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d2F0Y2h8ZW58MHx8MHx8fDA%3D" /></a><div class="card-content"><h3>Classic Watch</h3><p class="price">₹7,379</p></div></div>
+      <div class="card"><a href="#"><img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHdhdGNofGVufDB8fDB8fHww" /></a><div class="card-content"><h3>Luxury Watch</h3><p class="price">₹10,639</p></div></div>
+      <div class="card"><a href="#"><img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?q=80&w=1772&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></a><div class="card-content"><h3>Smartwatch</h3><p class="price">₹12,299</p></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Shoes</h2>
+    <div class="products">
+      <div class="card"><a href="#"><img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHJ1bm5pbmclMjBzaG9lc3xlbnwwfHwwfHx8MA%3D%3D" /></a><div class="card-content"><h3>Running Shoes</h3><p class="price">₹4,919</p></div></div>
+      <div class="card"><a href="#"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c25lYWtlcnxlbnwwfHwwfHx8MA%3D%3D" /></a><div class="card-content"><h3>Sneakers</h3><p class="price">₹4,099</p></div></div>
+      <div class="card"><a href="#"><img src="https://plus.unsplash.com/premium_photo-1705554330163-2e0ccc1808e2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Zm9ybWFsJTIwc2hvZXN8ZW58MHx8MHx8fDA%3D" /></a><div class="card-content"><h3>Formal Shoes</h3><p class="price">₹6,559</p></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Bags</h2>
+    <div class="products">
+      <div class="card"><a href="#"><img src="https://images.unsplash.com/photo-1566150902887-9679ecc155ba?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhhbmRiYWd8ZW58MHx8MHx8fDA%3D" /></a><div class="card-content"><h3>Handbag</h3><p class="price">₹3,689</p></div></div>
+      <div class="card"><a href="#"><img src="https://images.unsplash.com/photo-1509762774605-f07235a08f1f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmFja3BhY2t8ZW58MHx8MHx8fDA%3D" /></a><div class="card-content"><h3>Backpack</h3><p class="price">₹2,869</p></div></div>
+      <div class="card"><a href="#"><img src="https://images.unsplash.com/photo-1548863227-3af567fc3b27?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHRvdGUlMjBiYWd8ZW58MHx8MHx8fDA%3D" /></a><div class="card-content"><h3>Tote Bag</h3><p class="price">₹3,279</p></div></div>
+    </div>
+  </div>
+
+  <!-- New Accessories section -->
+  <div class="section">
+    <h2>Accessories</h2>
+    <div class="products">
+      <div class="card"><a href="#"><img src="https://images.unsplash.com/photo-1592967612543-01bf86026f4a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZWxlZ2FudCUyMGVhcmluZ3xlbnwwfHwwfHx8MA%3D%3D" /></a><div class="card-content"><h3>Elegant Earrings</h3><p class="price">₹1,199</p></div></div>
+      <div class="card"><a href="#"><img src="https://images.unsplash.com/photo-1731406322316-e4aadc43a734?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z29sZGVuJTIwbmVja2xhY2V8ZW58MHx8MHx8fDA%3D" /></a><div class="card-content"><h3>Golden Necklace</h3><p class="price">₹2,999</p></div></div>
+      <div class="card"><a href="#"><img src="https://images.unsplash.com/photo-1724937721130-c9a9a4ee477e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3R5bGlzaCUyMGJyYWNsZXR8ZW58MHx8MHx8fDA%3D" /></a><div class="card-content"><h3>Stylish Bracelet</h3><p class="price">₹899</p></div></div>
+    </div>
+  </div>
+
+  <!-- Promotional block above footer -->
+  <div class="promo-block">
+    Discover the best in fashion with Arja Ecommerce — Your trusted partner for style, quality, and unbeatable prices. Shop now and transform your wardrobe!
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Arja Ecommerce. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

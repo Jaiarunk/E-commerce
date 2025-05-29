@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Explore More - Arja Ecommerce</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0d0d0d;
+      color: #eee;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    header {
+      width: 100%;
+      max-width: 1200px;
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #ff9800;
+      font-weight: 700;
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: #eee;
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 25px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ff9800;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #ff9800;
+      left: 0;
+      bottom: -6px;
+      transition: width 0.3s ease;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-bottom: 30px;
+      color: #ff9800;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    /* Grid container for innovation cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(255, 152, 0, 0.3);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 20px 40px rgba(255, 152, 0, 0.7);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      filter: brightness(0.85);
+      transition: filter 0.3s ease;
+    }
+    .card:hover img {
+      filter: brightness(1);
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      color: #ff9800;
+      font-size: 22px;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .card-content p {
+      color: #ddd;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 60px;
+      color: #777;
+      font-size: 14px;
+      user-select: none;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 22px;
+      }
+      header h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Arja Ecommerce</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="explore.html" aria-current="page">Explore More</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <h2>Explore Innovative Collections</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://plus.unsplash.com/premium_photo-1734447278629-8ea3785ad957?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNtYXJ0JTIwd2VhcmFibGV8ZW58MHx8MHx8fDA%3D" alt="Tech Fashion"/>
+      <div class="card-content">
+        <h3>Smart Wearables</h3>
+        <p>Discover cutting-edge smart accessories that blend technology with style — from fitness trackers to smart jewelry.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1561596266-33b279af0880?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHN1c3RhaW5hYmxlJTIwc3R5bGV8ZW58MHx8MHx8fDA%3D" alt="Sustainable Fashion"/>
+      <div class="card-content">
+        <h3>Sustainable Styles</h3>
+        <p>Explore eco-friendly clothing made from organic and recycled materials, combining fashion with sustainability.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://plus.unsplash.com/premium_photo-1710294629873-9bf4ddb53e7c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHZpcnR1YWwlMjB0cnlvbnxlbnwwfHwwfHx8MA%3D%3D" alt="Virtual Reality"/>
+      <div class="card-content">
+        <h3>Virtual Try-On</h3>
+        <p>Experience the future with virtual try-on features, letting you preview products without stepping into a store.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1684828729865-0e8b74bba0d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Q3VzdG9taXphYmxlJTIwRmFzaGlvbnxlbnwwfHwwfHx8MA%3D%3D" alt="Custom Fashion"/>
+      <div class="card-content">
+        <h3>Customizable Fashion</h3>
+        <p>Create your own unique designs and personalize your wardrobe with easy-to-use customization tools.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://plus.unsplash.com/premium_photo-1718198498856-0e433917c1d0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YXVnbWVudGVkJTIwcmVhbGl0eSUyMHNob3BwaW5nfGVufDB8fDB8fHww" alt="Augmented Reality"/>
+      <div class="card-content">
+        <h3>Augmented Reality Shopping</h3>
+        <p>Immerse yourself in AR shopping experiences that bring products to life in your own space.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1747708833202-1a888b668d01?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZW5oYW5jZWQlMjBmYWJyaWNzfGVufDB8fDB8fHww" alt="Fashion Tech"/>
+      <div class="card-content">
+        <h3>Tech-Enhanced Fabrics</h3>
+        <p>Feel the difference with innovative fabrics that adapt to your environment and improve comfort.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Arja Ecommerce. All rights reserved.
+  </footer>
+
+</body>
+</html>

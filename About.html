@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Arja Ecommerce</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0d0d0d;
+      color: #eee;
+      line-height: 1.6;
+      padding: 40px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      max-width: 1200px;
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #ff9800;
+      font-weight: 700;
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: #eee;
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 25px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ff9800;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #ff9800;
+      left: 0;
+      bottom: -6px;
+      transition: width 0.3s ease;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    nav a[aria-current="page"] {
+      color: #ff9800;
+    }
+
+    main {
+      max-width: 900px;
+      width: 100%;
+      background: #1a1a1a;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(255, 152, 0, 0.3);
+    }
+
+    main h2 {
+      color: #ff9800;
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h3 {
+      font-size: 24px;
+      color: #ff9800;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #333;
+      padding-bottom: 8px;
+    }
+
+    section p {
+      font-size: 16px;
+      color: #ddd;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    footer {
+      margin-top: 60px;
+      color: #777;
+      font-size: 14px;
+      user-select: none;
+      text-align: center;
+      width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 30px 20px;
+      }
+      main h2 {
+        font-size: 26px;
+      }
+      section h3 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Arja Ecommerce</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="explore.html">Explore More</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>About Us</h2>
+
+    <section>
+      <h3>Our Story</h3>
+      <p>
+        Arja Ecommerce was founded in 2024 with a vision to revolutionize the online shopping experience.
+        We are committed to providing high-quality products, seamless service, and innovative solutions that
+        connect customers with the latest trends and essentials.
+      </p>
+    </section>
+
+    <section>
+      <h3>Our Mission</h3>
+      <p>
+        To empower our customers by offering a diverse range of products, exceptional customer service,
+        and an engaging shopping platform that blends technology and style.
+      </p>
+    </section>
+
+    <section>
+      <h3>Our Vision</h3>
+      <p>
+        To become a leading ecommerce platform recognized for innovation, sustainability, and customer satisfaction,
+        shaping the future of retail with creativity and integrity.
+      </p>
+    </section>
+
+    <section>
+      <h3>Core Values</h3>
+      <p>
+        <strong>Innovation:</strong> Continuously improving to deliver cutting-edge solutions.<br />
+        <strong>Customer Focus:</strong> Putting customers at the heart of everything we do.<br />
+        <strong>Sustainability:</strong> Promoting eco-friendly practices and products.<br />
+        <strong>Integrity:</strong> Building trust through transparency and honesty.<br />
+        <strong>Quality:</strong> Offering only the best products and experiences.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Arja Ecommerce. All rights reserved.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - Arja Ecommerce</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #f2f2f2;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #111;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+    }
+    header h2 {
+      color: #ccc;
+      font-size: 24px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ff9800;
+    }
+    main {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    }
+    main h2 {
+      color: #ff9800;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: #333;
+      color: #eee;
+      font-size: 16px;
+      resize: vertical;
+    }
+    input[type="submit"] {
+      background-color: #ff9800;
+      border: none;
+      padding: 15px 25px;
+      font-size: 18px;
+      color: #111;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+    input[type="submit"]:hover {
+      background-color: #e07b00;
+    }
+    footer {
+      background-color: #111;
+      padding: 30px 20px;
+      text-align: center;
+      color: #aaa;
+      margin-top: 40px;
+    }
+    @media (max-width: 640px) {
+      main {
+        margin: 20px;
+        padding: 20px;
+      }
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-end;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Arja Ecommerce</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="explore.html">Explore More</a>
+      <a href="About.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Contact Us</h2>
+    <form action="#" method="post">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+      <input type="submit" value="Send Message" />
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Arja Ecommerce. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
